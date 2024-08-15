@@ -10,4 +10,5 @@ func InitRouter(s *server.Server) {
 
 	s.Gin.GET("/test", h.CheckHealth)
 	s.Gin.POST("/message", h.PostMessage)
+	s.Gin.GET("/message/list", h.GetMessages)
 }
