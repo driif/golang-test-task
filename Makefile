@@ -1,3 +1,20 @@
+APP_NAME=golang-test-task
+PROJECT_ROOT_DIR=$(shell pwd)
+
+build: ##- Format, Lint, Test, Build.
+	@$(MAKE) go-build
+
+fmt: ##- Format code.
+	@go fmt ./...
+	
+go-build: ##- Build binary.
+	@go build -o bin/$(APP_NAME) cmd/api/main.go
+test: ##- Run tests, output by package, print coverage.
+	@go test ./... -race -count=1
+
+run: ##- Run the app.
+	@./bin/$(APP_NAME) run
+
 ## Docker-compose commands ( dc = docker-compose )
 dc-build: ##- Build docker image.
 	@docker-compose build

@@ -5,6 +5,7 @@ go 1.18
 require (
 	github.com/gin-gonic/gin v1.10.0
 	github.com/rs/zerolog v1.33.0
+	github.com/streadway/amqp v1.1.0
 	github.com/stretchr/testify v1.9.0
 	github.com/subosito/gotenv v1.6.0
 	golang.org/x/text v0.15.0
